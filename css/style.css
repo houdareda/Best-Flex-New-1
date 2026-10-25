@@ -1,0 +1,766 @@
+/* Font Files */
+
+@font-face {
+  font-family: mainFont;
+  src: local("mainFont"), url("mainFont.ttf");
+}
+
+
+/* main css */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+body , html{
+  font-family: mainFont, sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+input, button{
+  border: none;
+  outline: none;
+}
+
+
+
+/* error form style */ 
+
+#error {
+  position: relative;
+  top: -5px;
+  color: red;
+  font-size: 14px;
+  width: max-content;
+  margin: 0 auto;
+  padding: 0 5px 3px;
+  background: #fcfefe;
+  border-radius: 3px;
+  border: 1px solid red;
+  line-height: 1.2;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+#error.active {
+  opacity: 1;
+}
+
+
+/* button */
+
+.btn_img {
+  width: 55%;
+  margin: 0 auto;
+  padding: 4px 0 10px;
+}
+
+.div_btn{
+  text-align: center;
+}
+.div_btn .btn{
+  font-family: mainFont, sans-serif;
+  font-size: 28px;
+  padding: 1px 38px;
+  color: #fcfefe;
+  background: linear-gradient(#F2CC4F, #E04B38);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px #5858586b;
+  cursor: pointer;
+}
+
+
+@media (min-width:576px){
+  .btn_img{
+    width: 280px;
+  }
+}
+
+
+/* ================== */
+/* Start hero Section */
+.hero .content{
+  background: url(../images/bg-hero.webp);
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 10px;
+  text-align: center;
+}
+.hero ul li{
+  font-size: 5.3vw;
+  line-height: 1.3;
+  padding: 5px 0;
+  color: #fff;
+  background: linear-gradient( #E04E39 , #F2CA50);
+  border-radius: 25px;
+  width: 95%;
+  margin: 0 auto 8px;
+}
+.hero ul li.last{
+  font-size: 5.1vw;
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+  .hero ul li,
+  .hero ul li.last {
+    font-size: 28px;
+  }
+}
+
+/* ==========  md ≥ 768px  ========== */
+@media (min-width:768px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.flex{
+  display: flex;
+}
+.hero{
+  width: 50%;
+}
+
+.hero ul li,
+.hero ul li.last{
+  font-size: 26px;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+
+/* End hero Section */
+/* ================== */
+
+
+/* ================== */
+/* Start results Section */
+
+.results{
+  background: linear-gradient( #E14D38, #F2CD4F);
+  background-size: cover;
+  background-position: bottom;
+}
+.results .top_sec h3{
+  color: #fff;
+  font-size: 9vw;
+  padding-top: 20px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.results .top_sec h5{
+  color: #fff;
+  background: linear-gradient(to left, transparent ,#F2C94F , #F2C94F,transparent);
+  padding: 0 20px 5px;
+  font-size: 5.4vw;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+.results .import{
+  margin: 2px auto 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 10px;
+}
+.results .import span{
+  font-size: 5.5vw;
+  background: linear-gradient(  #3141D7, #90F3FB);
+  color: #fff;
+  line-height: 1.2;
+  padding: 0 8px 5px;
+  border-radius: 12px;
+  width: max-content;
+}
+.results .import p{
+  font-size: 3.7vw;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* Swiper Container Styles */
+.results .swiper {
+  width: 95%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.results .swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.results .swiper-slide {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.results .swiper-slide img {
+  width: 88%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.results .swiper-button-next, .results .swiper-button-prev{
+  color: #ffffff9d;
+  background: #3A6AD4;
+  width: 35px;
+  height: 35px;
+  transform: rotate(180deg);
+  border-radius: 100%;
+  border: 1px solid #fff;
+  top: 50%;
+  z-index: 10;
+}
+.swiper-rtl .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  font-size: 16px;
+  color: #fff ;
+  font-weight: bold;
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+  .results .top_sec h3{
+    font-size: 10vw;
+  }
+
+}
+
+/* ==========  md ≥ 768px  ========== */
+@media (min-width:768px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.results{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.results .top_sec h3{
+  font-size: 50px;
+}
+.results .top_sec h5{
+  font-size: 20px;
+}
+.results .import span{
+  font-size: 2.7vw;
+}
+.results .import p{
+  font-size: 1.8vw;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+/* End results Section */
+/* ================== */
+
+
+/* ================== */
+/* Start doctor Section */
+
+.doctor{
+  background: url(../images/bg-doc.webp);
+  background-size: cover;
+  background-position: top left;
+}
+
+.doctor .top_doc{
+  color: #fff;
+  padding-top: 12vw;
+}
+.doctor .top_doc h3{
+  font-size: 6.5vw;
+  line-height: 1.3;
+  padding-right: 4%;
+}
+.doctor .top_doc p{
+  background: linear-gradient(to right,#F3CC51,#E14D38);
+  padding-right: 4%;
+  width: max-content;
+  padding-left: 15px;
+  border-radius: 12px 0 0 12px;
+  font-size: 5.3vw;
+  margin-top: 8px;
+  margin-bottom: 35px;
+
+}
+.doctor ul{
+  padding: 5px 0;
+  background: linear-gradient(#F3CC51,#E14D38);
+  width: 90%;
+  margin: 10px auto 10px;
+  border-radius: 25px;
+}
+
+.doctor ul li{
+  margin-bottom: 3px;
+  color: #fff;
+  padding: 2px 0;
+  text-align: center;
+  font-size: 3.35vw;
+}
+
+.doctor .center_img{
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doctor .center_img img{
+  width: 46%;
+  border-radius: 15px;
+}
+
+.doctor .import{
+  width: max-content;
+  margin: 20px auto 10px;
+  border: 1px solid #fff;
+  background: #142263;
+  border-radius: 15px;
+  display: flex;
+  gap: 12px;
+  padding: 7px 0px 8px 12px;
+  position: relative;
+}
+.doctor .import span{
+  width: max-content;
+  padding: 2px 8px 5px;
+  background: linear-gradient(#7BD0F3,#354CD9);
+  width: 15vw;
+  font-size: 5vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: calc(100% + 2px);
+  border-radius: 15px;
+}
+.doctor .import p{
+  font-size: 2.8vw;
+  color: #fff;
+  line-height: 1.3;
+  margin-right: 16vw;
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.doctor ul li{
+  font-size: 3.2vw;
+}
+.doctor .import p{
+  font-size: 3vw;
+}
+.doctor .import img{
+  width: 12vw;
+}
+.doctor .import{
+  width: max-content;
+  padding: 5px 25px;
+}
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+  .flex-reverse{
+    flex-direction: row-reverse;
+  }
+  .doctor{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .doctor ul li{
+    font-size: 1.6vw;
+  }
+  .doctor .import p{
+    font-size: 16px;
+  }
+  .doctor .import img{
+    width: 55px;
+  }
+  .doctor .top_doc h3{
+    font-size: 3.3vw;
+  }
+  .doctor .top_doc p{
+    font-size: 2.6vw;
+  }
+  .doctor .import span{
+    font-size: 2.5vw;
+    width: 10vw;
+  }
+  .doctor .import p{
+    margin-right: 9vw;
+  }
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+
+/* End doctor Section */
+/* ================== */
+
+
+/* ================== */
+/* Start how_work Section */
+
+.how_work{
+  background: linear-gradient(110deg,#F2CC4F, #E04B38);
+  text-align: center;
+}
+
+.how_work .top_sec h3{
+  font-size: 6.2vw;
+  color: #fff;
+  background: linear-gradient(#F2CC4F, #E04B38);
+  padding: 5px 0 10px;
+}
+
+.how_work .top_sec p{
+  font-size: 4.7vw;
+  color: #f6f6f6;
+  line-height: 1.4;
+  background: linear-gradient(#6EBBEF,#4269DF);
+  padding-bottom: 4px;
+}
+.how_work .div_img{
+  width: 90%;
+  margin: 0px auto 12px;
+}
+.how_work .text{
+  margin-bottom: 10px;
+}
+.how_work .text p{
+  color: #fff;
+  font-size: 4.2vw;
+}
+.how_work .text p:nth-child(odd){
+  background: linear-gradient(#64A8EB,#2031b6);
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.how_work .top_sec h3{
+  font-size: 6vw;
+}
+.how_work .top_sec p{
+  font-size: 4.2vw;
+}
+.how_work .text p{
+  font-size: 3.6vw;
+}
+.how_work .div_img{
+  width: 100%;
+}
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+  .how_work{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .how_work .top_sec h3{
+    font-size: 30px;
+  }
+  .how_work .top_sec p{
+    font-size: 24px;
+  }
+  .how_work .text p{
+    font-size: 1.8vw;
+  }
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+
+
+/* End how_work Section */
+/* ================== */
+
+
+
+
+
+
+
+
+
+/* ================== */
+/* Start form_section Section */
+
+
+/* top form section */
+
+
+.form_section .delvery_text{
+  padding: 14px 0;
+}
+
+.form_section .delvery_text p {
+  color: #fff;
+  text-align: center;
+  font-size: 6.5vw;
+  line-height: 1;
+}
+.form_section .delvery_text p.bg{
+  background: linear-gradient(#F2981D, #BD5F12);
+  padding: 2px 8px 8px;
+  width: max-content;
+  margin: 5px auto;
+}
+
+
+/* form */
+
+.form_section .container_form{
+  background: linear-gradient(#F2CC4F, #E04B38);
+  padding-bottom: 10px;
+}
+
+.form_section .sm-p {
+  font-size: 2.4vw;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  padding: 7px 0;
+}
+
+
+.form_section form{
+  background: linear-gradient(#436ADF, #90F3FB);
+  text-align: center;
+  width: 95%;
+  margin: 0 auto ;
+  border-radius: 18px;
+  box-shadow: 5px 5px 8px #00000027;
+  padding-bottom: 15px;
+}
+.form_section .top_form{
+  padding: 12px 0;
+}
+.form_section .top_form p{
+  font-size: 5vw;
+  line-height: 1.3;
+  color: #fbfdfd;
+}
+.form_section form .input_div{
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  }
+
+.form_section form .input_div svg{
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.form_section form .input_div .icon_Phone{
+  transform:translateY(-50%) scaleX(-1);
+}
+
+
+.form_section form input{
+  width: 100%;
+  padding: 15px 40px 15px 10px;
+  font-size: 18px;
+  box-shadow: 5px 5px 8px #00000031;
+  text-align: right;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in;
+}
+.form_section form input:focus {
+  border-color: #68E03E;
+}
+
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.form_section .delvery_text p{
+  font-size: 6vw;
+}
+.form_section .sm-p{
+  font-size: 2.5vw;
+}
+.form_section .top_form p{
+  font-size: 4.8vw;
+}
+.form_section form .input_div{
+  width: 90%;
+}
+}
+
+
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.form_section{
+  display: flex;
+}
+.form_section .price{
+  width: 50%;
+}
+
+.form_section .container_form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_section form{
+  width: 90%;
+}
+.form_section .delvery_text p{
+  font-size: 30px;
+}
+.form_section .sm-p{
+  font-size: 13.5px;
+}
+.form_section .top_form p{
+  font-size: 24px;
+}
+
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+.form_section form{
+  width: 80%;
+  padding: 25px 20px 30px;
+  width: max-content;
+  min-width: 600px;
+}
+}
+
+/* End form_section Section */
+/* ================== */
+
+
+
+
+/* ================== */
+/* Start footer Section */
+
+.footer{
+  background: #E04B38;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.footer .boxs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0 auto;
+  
+}
+
+.footer .boxs .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 29%;
+}
+.footer .boxs .box.last{
+  width: 40%;
+}
+.footer .boxs .box img {
+  height: 24px;
+  width: auto;
+}
+
+.footer .boxs .box p {
+  font-size: 2.4vw;
+  line-height: 1.5;
+  color: #ececec;
+}
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.footer .boxs .box img{
+  height: 28px;
+}
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+  .footer .boxs .box{
+    gap: 20px;
+  }
+.footer .boxs .box img{
+  height: 40px;
+}
+.footer .boxs .box p{
+  font-size: 18px;
+}
+
+}
+
+/* End footer Section */
+/* ================== */
